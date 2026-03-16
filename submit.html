@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Submit an Event · 121212.events</title>
+  <meta name="description" content="Submit your event to be featured on 121212.events. Free to list. Reviewed within 48 hours." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+</head>
+<body>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <nav id="mainNav">
+    <div class="nav-content">
+      <a href="index.html" class="logo">
+        <span class="star">★</span> 121212<span>.events</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="events.html">Browse Events</a></li>
+        <li><a href="events.html?price=free">Free Events</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="submit.html" class="nav-cta">Submit an Event</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="submit-grid">
+
+    <!-- ── Left: Info ── -->
+    <div class="submit-info">
+      <span class="section-label">List Your Event</span>
+      <h2>Submit an Event to the Network</h2>
+      <p>
+        121212.events is the curated events hub for the 121212 ecosystem —
+        built to surface Black cultural events that deserve a wider audience.
+        If it's quality, community-forward, and happening in a city we cover,
+        we want it listed.
+      </p>
+      <p>
+        All submissions are reviewed within 48 hours.
+        Free to submit. No pay-to-feature. Period.
+      </p>
+
+      <div class="perks-list" style="margin-top:2rem;">
+        <div class="perk-item">
+          <span class="perk-icon">✅</span>
+          <div>
+            <h4>Free to List</h4>
+            <p>No listing fees. No "promoted" tiers that bury organic results. Every approved event gets equal placement.</p>
+          </div>
+        </div>
+        <div class="perk-item">
+          <span class="perk-icon">🔍</span>
+          <div>
+            <h4>Curated Review</h4>
+            <p>We manually review every submission. Events must be Black-organized, Black-centered, or explicitly serving Black communities.</p>
+          </div>
+        </div>
+        <div class="perk-item">
+          <span class="perk-icon">🔗</span>
+          <div>
+            <h4>Cross-Linked to City Hubs</h4>
+            <p>Approved events appear in your city's hub on 121212.community, giving you reach across the full network.</p>
+          </div>
+        </div>
+        <div class="perk-item">
+          <span class="perk-icon">📅</span>
+          <div>
+            <h4>Reviewed in 48 Hours</h4>
+            <p>Submit by Thursday for weekend listing. We'll notify you at the email you provide.</p>
+          </div>
+        </div>
+        <div class="perk-item">
+          <span class="perk-icon">🌐</span>
+          <div>
+            <h4>Expanding Network</h4>
+            <p>Currently active in 7 cities with more coming. Submit for any city — we'll add it when the hub launches.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Right: Form ── -->
+    <div class="submit-form-wrap">
+      <h2>Event Details</h2>
+      <form class="submit-form" id="eventForm">
+
+        <div class="form-group">
+          <label for="eventName">Event Name *</label>
+          <input type="text" id="eventName" name="eventName" placeholder="Official event title" required />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="city">City *</label>
+            <select id="city" name="city" required>
+              <option value="" disabled selected>Select city</option>
+              <option value="atlanta">Atlanta, GA</option>
+              <option value="chicago">Chicago, IL</option>
+              <option value="houston">Houston, TX</option>
+              <option value="dc">Washington D.C.</option>
+              <option value="miami">Miami, FL</option>
+              <option value="neworleans">New Orleans, LA</option>
+              <option value="detroit">Detroit, MI</option>
+              <option value="other">Other (specify below)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="category">Category *</label>
+            <select id="category" name="category" required>
+              <option value="" disabled selected>Select category</option>
+              <option value="music">🎵 Music</option>
+              <option value="business">💼 Business</option>
+              <option value="culture">✊ Culture</option>
+              <option value="art">🎨 Art</option>
+              <option value="tech">💻 Tech</option>
+              <option value="food">🍽 Food</option>
+              <option value="fashion">👗 Fashion</option>
+              <option value="wellness">✨ Wellness</option>
+              <option value="comedy">🎤 Comedy</option>
+              <option value="film">🎬 Film</option>
+              <option value="education">📚 Education</option>
+              <option value="community">🏘 Community</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="venue">Venue Name *</label>
+          <input type="text" id="venue" name="venue" placeholder="Full venue name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="address">Venue Address</label>
+          <input type="text" id="address" name="address" placeholder="Street address, City, State" />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="eventDate">Event Date *</label>
+            <input type="date" id="eventDate" name="eventDate" required />
+          </div>
+          <div class="form-group">
+            <label for="eventTime">Start Time</label>
+            <input type="time" id="eventTime" name="eventTime" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="price">Ticket Price</label>
+            <input type="text" id="price" name="price" placeholder='e.g. $25, Free, $10–$50' />
+          </div>
+          <div class="form-group">
+            <label for="ticketUrl">Ticket / RSVP Link</label>
+            <input type="url" id="ticketUrl" name="ticketUrl" placeholder="https://..." />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Event Description *</label>
+          <textarea id="description" name="description" rows="5" placeholder="Describe the event — who it's for, what to expect, why it matters." required></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="organizerName">Organizer Name *</label>
+            <input type="text" id="organizerName" name="organizerName" placeholder="Your name or org name" required />
+          </div>
+          <div class="form-group">
+            <label for="organizerEmail">Organizer Email *</label>
+            <input type="email" id="organizerEmail" name="organizerEmail" placeholder="email@example.com" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="instagram">Instagram Handle (optional)</label>
+          <input type="text" id="instagram" name="instagram" placeholder="@handle" />
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Anything else we should know?</label>
+          <textarea id="notes" name="notes" rows="3" placeholder="Black-owned venue, recurring event, special guests, accessibility info..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-gold" style="margin-top:0.5rem;">
+          Submit Event for Review
+        </button>
+
+        <p style="font-size:0.75rem;color:var(--text-muted);margin-top:0.75rem;line-height:1.6;">
+          By submitting you confirm this event is real, the details are accurate,
+          and you have the right to submit it. We'll review within 48 hours
+          and notify you at the email provided.
+        </p>
+
+      </form>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><span class="star">★</span> 121212<span>.events</span></a>
+          <p>Curated Black cultural events across the 121212 ecosystem.</p>
+          <div class="footer-contact">
+            <a href="mailto:events@121212.events">events@121212.events</a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Platform</h4><ul>
+          <li><a href="events.html">Browse Events</a></li>
+          <li><a href="submit.html">Submit an Event</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Ecosystem</h4><ul>
+          <li><a href="https://121212.community">121212.community</a></li>
+          <li><a href="https://121212.reviews">121212.reviews</a></li>
+          <li><a href="#">121212.market</a></li>
+          <li><a href="#">121212.music</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Legal</h4><ul>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+        </ul></div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-legal">&copy; 2025–2026 121212.events. All rights reserved. Operated by MCM Enterprises.</div>
+        <div class="footer-ecosystem">
+          <a href="https://121212.community">121212.community</a>
+          <a href="https://121212.reviews">121212.reviews</a>
+          <a href="#">121212.market</a>
+          <a href="#">121212.music</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
