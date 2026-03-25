@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700;900&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-secondary hover:bg-secondary-dark text-primary-dark font-semibold py-3 px-8 rounded-md transition-all duration-300 hover:shadow-lg hover:shadow-secondary/20;
+  }
+  .btn-outline {
+    @apply border-2 border-secondary text-secondary hover:bg-secondary hover:text-primary-dark font-semibold py-3 px-8 rounded-md transition-all duration-300;
+  }
+  .section-padding {
+    @apply py-16 md:py-24 px-4 md:px-8;
+  }
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+  .heading-primary {
+    @apply font-serif text-4xl md:text-5xl lg:text-6xl font-bold;
+  }
+  .heading-secondary {
+    @apply font-serif text-3xl md:text-4xl font-semibold;
+  }
+  .text-gradient {
+    @apply bg-gradient-to-r from-secondary to-secondary-light bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
